@@ -1,6 +1,6 @@
 .navbar-lewagon {
-  justify-content: space-between;
-  background: white;
+  justify-content: space-around;
+  color:black;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -10,3 +10,15 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+
+.title {
+  font-family: 'Pacifico', cursive;
+  font-size:1.5em;
+}
+// .navbar-expand-sm .navbar-nav .dropdown-menu {
+//   background-color: transparent;
+// }
+
+// a.nav-link{
+//   color:white !important;
+// }

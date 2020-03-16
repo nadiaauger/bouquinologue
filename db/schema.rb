@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_13_163415) do
+ActiveRecord::Schema.define(version: 2020_03_16_131927) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,17 +29,13 @@ ActiveRecord::Schema.define(version: 2020_03_13_163415) do
     t.index ["resource_type", "resource_id"], name: "index_active_admin_comments_on_resource_type_and_resource_id"
   end
 
-  create_table "add_quantity_to_books", force: :cascade do |t|
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
   create_table "books", force: :cascade do |t|
     t.string "author"
     t.string "title"
     t.string "editor"
     t.string "year"
     t.decimal "price"
+    t.integer "quantity", default: 1
     t.integer "category"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

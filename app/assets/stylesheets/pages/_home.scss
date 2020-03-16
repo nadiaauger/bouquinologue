@@ -1,1 +1,50 @@
 // Specific CSS for your home-page
+
+#myInput {
+  margin-bottom: 1.5em;
+}
+
+.fa-search:before {
+  font-size: 2em;
+  margin-right: 4.5em;
+  margin-left: 0.5em;
+}
+
+.second-titre{
+  margin-bottom:7vh;
+  margin-top:7vh;
+}
+
+.cards_scroll{
+  display:flex;
+  overflow-y: hidden;
+  margin-bottom: 2em;
+}
+
+a:hover{
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+.card-categ{
+  background-size: cover;
+  background-position: center;
+  height: 230px;
+  width: 280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin-right: 30px;
+  overflow-wrap: break-word;
+  text-align: center;
+  &:hover{
+    text-decoration: none;
+    opacity: 0.8;
+  }
+}

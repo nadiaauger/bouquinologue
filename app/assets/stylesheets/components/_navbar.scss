@@ -1,5 +1,5 @@
 .navbar-lewagon {
-  justify-content: space-around;
+  justify-content: space-between;
   color:black;
 }
 
@@ -14,6 +14,11 @@
 .title {
   font-family: 'Pacifico', cursive;
   font-size:1.5em;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    // color: rgba(0, 0, 0, 0.5);
+  font-size: 1.2em;
 }
 // .navbar-expand-sm .navbar-nav .dropdown-menu {
 //   background-color: transparent;

@@ -36,9 +36,17 @@ ActiveRecord::Schema.define(version: 2020_03_16_131927) do
     t.string "year"
     t.decimal "price"
     t.integer "quantity", default: 1
-    t.integer "category"
+    t.bigint "category_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["category_id"], name: "index_books_on_category_id"
+  end
+
+  create_table "categories", force: :cascade do |t|
+    t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "books", "categories"
 end

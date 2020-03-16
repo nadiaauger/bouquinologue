@@ -12,20 +12,23 @@
         <li class="nav-item dropdown">
           <%= link_to "Livres", "#", class: "nav-link dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-            <%= link_to "Psychanalyse", psychanalyse_path, class: "dropdown-item" %>
-            <%= link_to "Psychanalyse Revues Périodiques", psychanalyseRevuesPeriodiques_path, class: "dropdown-item" %>
-            <%= link_to "PsychiatrieEnfant", psychiatrieEnfant_path, class: "dropdown-item" %>
-            <%= link_to "Psychologie", psychologie_path, class: "dropdown-item" %>
-            <%= link_to "Philosophie", philosophie_path, class: "dropdown-item" %>
-            <%= link_to "Sociologie Ethno Anthropologie", sociologieEthnoAnthropologie_path, class: "dropdown-item" %>
-            <%= link_to "Littérature", litterature_path, class: "dropdown-item" %>
-            <%= link_to "Littérature Revues Collections", litteratureRevuesCollections_path, class: "dropdown-item" %>
-            <%= link_to "Poésie", poesie_path, class: "dropdown-item" %>
-            <%= link_to "Théàtre", theatre_path, class: "dropdown-item" %>
-            <%= link_to "Cinéma", cinema_path, class: "dropdown-item" %>
-            <%= link_to "Civilisation Arabo Musulmane", civilisationAraboMusulmane_path, class: "dropdown-item" %>
-            <%= link_to "Sémantique Sémiologie", semantiqueSemiologie_path, class: "dropdown-item" %>
-            <%= link_to "ArtsDesignPeinturePhoto", artsDesignPeinturePhoto_path, class: "dropdown-item" %>
+            <% @categories.each do |category| %>
+              <%= link_to category.name, category_path(category), class: "dropdown-item" %>
+            <% end %>
+            <%#= link_to "Psychanalyse", psychanalyse_path, class: "dropdown-item" %>
+            <%#= link_to "Psychanalyse Revues Périodiques", psychanalyseRevuesPeriodiques_path, class: "dropdown-item" %>
+            <%#= link_to "PsychiatrieEnfant", psychiatrieEnfant_path, class: "dropdown-item" %>
+            <%#= link_to "Psychologie", psychologie_path, class: "dropdown-item" %>
+            <%#= link_to "Philosophie", philosophie_path, class: "dropdown-item" %>
+            <%#= link_to "Sociologie Ethno Anthropologie", sociologieEthnoAnthropologie_path, class: "dropdown-item" %>
+            <%#= link_to "Littérature", litterature_path, class: "dropdown-item" %>
+            <%#= link_to "Littérature Revues Collections", litteratureRevuesCollections_path, class: "dropdown-item" %>
+            <%#= link_to "Poésie", poesie_path, class: "dropdown-item" %>
+            <%#= link_to "Théàtre", theatre_path, class: "dropdown-item" %>
+            <%#= link_to "Cinéma", cinema_path, class: "dropdown-item" %>
+            <%#= link_to "Civilisation Arabo Musulmane", civilisationAraboMusulmane_path, class: "dropdown-item" %>
+            <%#= link_to "Sémantique Sémiologie", semantiqueSemiologie_path, class: "dropdown-item" %>
+            <%#= link_to "ArtsDesignPeinturePhoto", artsDesignPeinturePhoto_path, class: "dropdown-item" %>
           </div>
         </li>
         <li class="nav-item active">

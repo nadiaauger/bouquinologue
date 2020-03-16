@@ -7,10 +7,18 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Book.destroy_all
+Category.destroy_all
 i = 0
 require 'csv'
 
+categories = ["Psychanalyse", "Psychanalyse Revues Périodiques", "Psychiatrie Enfant", "Psychologie", "Philosophie", "Sociologie Ethno Anthropologie", "Littérature", "Littérature Revues Collections", "Poésie", "Théâtre", "Cinéma", "Civilisation Arabo Musulmane", "Semantique Semiologie", "Arts Design Peinture Photo"]
+
 while i <= 13  do
+  c = Category.new({
+    name: categories[i],
+  })
+  c.validate!
+  c.save
   csv_text = File.read(Rails.root.join('lib', 'seeds', "Book#{i}.csv"))
   csv = CSV.parse(csv_text, :headers => true, :encoding => 'ISO-8859-1')
   csv.each do |row|
@@ -22,7 +30,7 @@ while i <= 13  do
     # p row['editor']
     t.year = row['year']
     t.price = row['price']
-    t.category = row['category'].to_i
+    t.category = c
     t.quantity = 1
     t.validate!
     t.save

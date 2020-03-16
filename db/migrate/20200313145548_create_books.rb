@@ -7,7 +7,7 @@ class CreateBooks < ActiveRecord::Migration[6.0]
       t.string "year"
       t.decimal "price"
       t.integer "quantity"
-      t.integer "category"
+      t.references :category, foreign_key: true
       t.timestamps
     end
   end
